@@ -32,13 +32,13 @@ const navslide = () => {
         
     })
 
-    window.onscroll = function (){
-        if(document.documentElement.scrollTop > 250 && document.documentElement.scrollTop < 500){
-            sub_desc.style.animation = "main-desc-slide-in-phone 0.7s forwards";
-            button.style.animation = "sub-desc-slide-in-phone 0.7s forwards";
-            console.log("hello");
-        }
-    }
+    // window.onscroll = function (){
+    //     if(document.documentElement.scrollTop > 250 && document.documentElement.scrollTop < 500){
+    //         sub_desc.style.animation = "main-desc-slide-in-phone 0.7s forwards";
+    //         button.style.animation = "sub-desc-slide-in-phone 0.7s forwards";
+    //         console.log("hello");
+    //     }
+    // }
 
     // onclick on shop then mega dropdown menu animates
     shop.addEventListener('click', (event) => {
