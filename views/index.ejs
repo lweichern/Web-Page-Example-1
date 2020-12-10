@@ -6,6 +6,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <!-- animate on scroll library -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     </head>
     <body>
         <nav class="navbar">
@@ -188,11 +190,50 @@
                 <h3>Light, Colourful, Sleek</h3>
                 <button>See More</button>
             </div>
-            <div class="column-right">
+            <div class="tablet-image">
                 <img src="../assets/images/ipad.png" alt="ipad image">
+            </div>
+        </div>
+
+        <div class="macbook-section">
+            <div class="macbook-image">
+                <img src="../assets/images/macbook.png" alt="macbook image">
+            </div>
+            <div class="macbook-description">
+                <h1>MacBook</h1>
+                <h3>Light, Colourful, Sleek</h3>
+                <button>See More</button>
+            </div>
+        </div>
+
+        <div class="apple-watch-section">
+            <div class="apple-watch-description">
+                <h1>Apple Watch</h1>
+                <h3>Light, Colourful, Sleek</h3>
+                <button>See More</button>
+            </div>
+            <div class="apple-watch-image">
+                <img src="../assets/images/apple-watch.png" alt="apple watch image">
+            </div>
+        </div>
+
+        <!-- AOS library -->
+        <div class="imac-section">
+            <div class="imac-image" data-aos="fade-right" data-aos-duration="1200">
+                <img src="../assets/images/imac.png" alt="imac image">
+            </div>
+            <div class="imac-description" data-aos="fade-left" data-aos-duration="1200">
+                <h1>iMac</h1>
+                <h3>See the World in Pixels</h3>
+                <button>See More</button>
             </div>
         </div>
 
     </body>
     <script src="../assets/script/myscript.js"></script>
+    <!-- Animate on scroll library -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </html>

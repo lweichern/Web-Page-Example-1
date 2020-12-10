@@ -40,6 +40,37 @@ const navslide = () => {
     //     }
     // }
 
+    const tablet_description = document.querySelector('.tablet-description');
+    const tablet_img = document.querySelector('.tablet-section img');
+    const macbook_description = document.querySelector('.macbook-description');
+    const macbook_img = document.querySelector('.macbook-section img');
+    const watch_description = document.querySelector('.apple-watch-description');
+    const watch_img = document.querySelector('.apple-watch-section img');
+
+    window.onscroll = function (){
+        console.log(document.documentElement.scrollTop);
+        if(document.documentElement.scrollTop > 720 && document.documentElement.scrollTop < 1200){
+            tablet_description.style.animation = "left-animate 0.7s forwards ease-in";
+            tablet_img.style.animation = "right-animate 0.7s forwards ease-in";
+        }
+
+        if(document.documentElement.scrollTop < 720 && document.documentElement.scrollTop > 1200){
+            tablet_description.style.opacity = "0";
+            tablet_img.style.opacity = "0";
+        }
+
+        if(document.documentElement.scrollTop > 1200 && document.documentElement.scrollTop < 1680){
+            macbook_description.style.animation = "macbook-right-animate 0.7s forwards ease-in";
+            macbook_img.style.animation = "macbook-left-animate 0.7s forwards ease-in";
+        }
+
+        if(document.documentElement.scrollTop > 1680){
+            watch_description.style.animation = "left-animate 0.7s forwards ease-in";
+            watch_img.style.animation = "right-animate 0.7s forwards ease-in";
+        }
+
+    }
+
     // onclick on shop then mega dropdown menu animates
     shop.addEventListener('click', (event) => {
         event.preventDefault();

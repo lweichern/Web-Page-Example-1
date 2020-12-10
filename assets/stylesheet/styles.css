@@ -81,6 +81,13 @@
     border: none;
     border-radius: 20px;
     cursor: pointer;
+    transition: 0.5s;
+}
+
+.description button:hover{
+    background-color: inherit;
+    color: white;
+    border: 1px solid white;
 }
 
 .description div{
@@ -168,9 +175,10 @@
     flex-flow: row wrap;
     flex-direction: row;
     position: absolute;
-    transform: translateY(-680px);
+    transform: translateY(-720px);
     background-color: white;
     opacity: 0;
+    z-index: -1;
     padding: 20px 0px;
 }
 
@@ -208,20 +216,24 @@
 @keyframes mega-dropdown-in{
     from{
         opacity: 0;
-        transform: translateY(-670px);
+        z-index: -1;
+        transform: translateY(-720px);
     }to{
         opacity: 1;
-        transform: translateY(-650px)
+        z-index: inherit;
+        transform: translateY(-700px)
     }
 }
 
 @keyframes mega-dropdown-out{
     from{
         opacity: 1;
-        transform: translateY(-650px);
+        z-index: inherit;
+        transform: translateY(-700px);
     }to{
         opacity: 0;
-        transform: translateY(-670px)
+        z-index: -1;
+        transform: translateY(-720px)
     }
 }
 
@@ -248,17 +260,16 @@
     justify-content: space-around;
     padding: 100px 0px;
     align-items: center;
+    background: transparent;
+    color: black;
+    background: linear-gradient(95deg,#A2AAB0 50%, white 50%);
+    /* animation: background-appear 2s 0.7s forwards ease-in; */
 }
 
 .tablet-section img{
     width: 370px;
     height: 400px;
     opacity: 0;
-    animation: desc-animate 0.7s 1.7s forwards;
-}
-
-.tablet-section{
-    color: black;
 }
 
 .tablet-description{
@@ -266,7 +277,6 @@
     line-height: 40px;
     font-family: 'Poppins', sans-serif;
     opacity: 0;
-    animation: desc-animate 0.7s 1s forwards;
 }
 
 .tablet-description button{
@@ -275,18 +285,211 @@
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    color: white;
+    color: black;
     transition: 0.5s;
+    border: 1px solid transparent;
     /* neumorphism */
-    box-shadow:  20px 20px 70px #bfbfbf, 
-    -20px -20px 60px #ffffff;
+    background-color: #A2AAB0;
+    box-shadow: 20px 20px 40px #8a9196, 
+    -20px -20px 40px #bac4ca;
 }
 
-@keyframes desc-animate{
+.tablet-description button:hover{
+    background-color: inherit;
+    color: white;
+    border: 1px solid white;
+}
+
+@keyframes background-appear{
     from{
         opacity: 0;
+        background: transparent;
     }to{
         opacity: 1;
+        background: linear-gradient(100deg, turquoise 50%, transparent 50%);
+    }
+}
+
+/* macbook section */
+.macbook-section{
+    display: flex;
+    justify-content: space-around;
+    padding: 100px 0px;
+    align-items: center;
+    background: linear-gradient(85deg, white 50%,#A2AAB0 50%);
+}
+
+.macbook-section img{
+    width: 600px;
+    height: 400px;
+    transform: translateX(-80px);
+    opacity: 0;
+}
+
+.macbook-section{
+    color: black;
+}
+
+.macbook-description{
+    transform: translateY(-60px) translateX(-100px);
+    line-height: 40px;
+    font-family: 'Poppins', sans-serif;
+    opacity: 0;
+}
+
+.macbook-description button{
+    padding: 12px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: black;
+    transition: 0.5s;
+    border: 1px solid transparent;
+    /* neumorphism */
+    background-color: #A2AAB0;
+    box-shadow: 20px 20px 40px #8a9196, 
+    -20px -20px 40px #bac4ca;
+}
+
+.macbook-description button:hover{
+    background-color: inherit;
+    color: white;
+    border: 1px solid white;
+}
+
+/* watch section */
+.apple-watch-section{
+    display: flex;
+    justify-content: space-around;
+    padding: 100px 0px;
+    align-items: center;
+    background: linear-gradient(95deg,#A2AAB0 50%, white 50%);
+}
+
+.apple-watch-section img{
+    transform: translateX(20px);
+    width: 350px;
+    height: 350px;
+    opacity: 0;
+}
+
+.apple-watch-section{
+    color: black;
+}
+
+.apple-watch-description{
+    transform: translateY(-50px);
+    line-height: 40px;
+    font-family: 'Poppins', sans-serif;
+    opacity: 0;
+}
+
+.apple-watch-description button{
+    padding: 12px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: black;
+    transition: 0.5s;
+    border: 1px solid transparent;
+    /* neumorphism */
+    background-color: #A2AAB0;
+    box-shadow: 20px 20px 40px #8a9196, 
+    -20px -20px 40px #bac4ca;
+}
+
+.apple-watch-description button:hover{
+    background-color: inherit;
+    color: white;
+    border: 1px solid white;
+}
+
+
+/* imac section */
+.imac-section{
+    display: flex;
+    justify-content: space-around;
+    padding: 100px 0px;
+    align-items: center;
+    background: linear-gradient(85deg, white 50%,#A2AAB0 50%);
+}
+
+.imac-section img{
+    width: 500px;
+    height: 370px;
+    transform: translateX(-80px);
+}
+
+.imac-section{
+    color: black;
+}
+
+.imac-description{
+    transform: translateX(-70px);
+    line-height: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.imac-description button{
+    padding: 12px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: black;
+    transition: 0.5s;
+    border: 1px solid transparent;
+    /* neumorphism */
+    background-color: #A2AAB0;
+    box-shadow: 20px 20px 40px #8a9196, 
+    -20px -20px 40px #bac4ca;
+}
+
+.imac-description button:hover{
+    background-color: inherit;
+    color: white;
+    border: 1px solid white;
+}
+
+@keyframes left-animate{
+    from{
+        opacity: 0;
+        transform: translateX(-20px);
+    }to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes right-animate{
+    from{
+        opacity: 0;
+        transform: translateX(20px);
+    }to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes macbook-right-animate{
+    from{
+        opacity: 0;
+        transform: translateY(-60px) translateX(-80px);
+    }to{
+        opacity: 1;
+        transform: translateY(-60px) translateX(-100px);
+    }
+}
+
+@keyframes macbook-left-animate{
+    from{
+        opacity: 0;
+        transform: translateX(-100px);
+    }to{
+        opacity: 1;
+        transform: translateX(-80px);
     }
 }
 
