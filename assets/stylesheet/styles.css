@@ -262,7 +262,7 @@
     align-items: center;
     background: transparent;
     color: black;
-    background: linear-gradient(95deg,#A2AAB0 50%, white 50%);
+    background: linear-gradient(95deg,#A2AAB0 50%, white);
     /* animation: background-appear 2s 0.7s forwards ease-in; */
 }
 
@@ -300,23 +300,13 @@
     border: 1px solid white;
 }
 
-@keyframes background-appear{
-    from{
-        opacity: 0;
-        background: transparent;
-    }to{
-        opacity: 1;
-        background: linear-gradient(100deg, turquoise 50%, transparent 50%);
-    }
-}
-
 /* macbook section */
 .macbook-section{
     display: flex;
     justify-content: space-around;
     padding: 100px 0px;
     align-items: center;
-    background: linear-gradient(85deg, white 50%,#A2AAB0 50%);
+    background: linear-gradient(85deg, white,#A2AAB0 50%);
 }
 
 .macbook-section img{
@@ -364,7 +354,7 @@
     justify-content: space-around;
     padding: 100px 0px;
     align-items: center;
-    background: linear-gradient(95deg,#A2AAB0 50%, white 50%);
+    background: linear-gradient(95deg,#A2AAB0 50%, white);
 }
 
 .apple-watch-section img{
@@ -413,7 +403,7 @@
     justify-content: space-around;
     padding: 100px 0px;
     align-items: center;
-    background: linear-gradient(85deg, white 50%,#A2AAB0 50%);
+    background: linear-gradient(85deg, white,#A2AAB0 50%);
 }
 
 .imac-section img{
